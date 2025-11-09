@@ -52,8 +52,8 @@ body:
     id: game-version
     attributes:
       label: Game Version
-      description: What version of Jitter are you running?
-      placeholder: "e.g., 1.0.0, Early Access Build 2024-11"
+      description: What version of Jitter are you running? (/steamapps/common/Jitter/res/version.txt)
+      placeholder: "e.g., 0.8.0.2"
     validations:
       required: true
       
