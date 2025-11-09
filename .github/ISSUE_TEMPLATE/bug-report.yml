@@ -1,0 +1,75 @@
+name: "Bug report"
+description: "Report a bug, crash, or unexpected behavior in Jitter."
+title: "[BUG] "
+labels: ["type: bug", "status: needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve **Jitter**!  
+        Please fill out this form as completely as possible — it really helps us reproduce and fix the issue.
+  - type: input
+    id: game_version
+    attributes:
+      label: "Game version / Build"
+      description: "Example: Steam build 12345 or 2025.11.07"
+      placeholder: ""
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: "Platform / OS"
+      options:
+        - "Windows 10"
+        - "Windows 11"
+        - "Linux"
+        - "Other"
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: "Short description"
+      description: "What happened?"
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Steps to reproduce"
+      description: "1. ... 2. ... 3. ..."
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Expected behavior"
+      description: "What did you expect to happen?"
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: "Actual behavior"
+      description: "What actually happened?"
+      required: true
+  - type: input
+    id: logs
+    attributes:
+      label: "Logs or crash files"
+      description: "Attach or link to log files or crash dumps if available."
+      required: false
+  - type: textarea
+    id: repro_video
+    attributes:
+      label: "Screenshots / Video"
+      description: "Attach files or link to Imgur, YouTube, etc."
+      required: false
+  - type: boolean
+    id: crash_dump
+    attributes:
+      label: "Includes crash dump / stack trace?"
+      description: "Check if a crash dump or stack trace is attached."
+  - type: textarea
+    id: extra
+    attributes:
+      label: "Additional details"
+      description: "Graphics settings, controllers, mods, or anything else relevant."
+      required: false
