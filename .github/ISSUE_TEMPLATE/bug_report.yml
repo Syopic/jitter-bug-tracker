@@ -96,9 +96,9 @@ body:
   - type: textarea
     id: logs
     attributes:
-      label: Log Files or Error Messages
+      label: Log Files or Error Messages (/steamapps/common/Jitter/logs)
       description: If applicable, paste any error messages or relevant log file contents
-      placeholder: Paste logs here...
+      placeholder: Paste last log here...
       render: shell
     validations:
       required: false
