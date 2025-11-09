@@ -1,0 +1,27 @@
+name: Question or Discussion
+description: Ask a question or start a discussion about Jitter
+title: "[Question]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question or want to discuss something about Jitter? You're in the right place!
+        
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know or discuss?
+      placeholder: Please describe your question...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Is there any additional context that would help us answer your question?
+      placeholder: Any relevant information...
+    validations:
+      required: false
