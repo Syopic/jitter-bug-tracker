@@ -1,75 +1,65 @@
-name: "Bug report"
-description: "Report a bug, crash, or unexpected behavior in Jitter."
-title: "[BUG] "
-labels: ["type: bug", "status: needs-triage"]
-assignees: []
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
+type: bug
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for helping improve **Jitter**!  
-        Please fill out this form as completely as possible — it really helps us reproduce and fix the issue.
+        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: game_version
+    id: contact
     attributes:
-      label: "Game version / Build"
-      description: "Example: Steam build 12345 or 2025.11.07"
-      placeholder: ""
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
+    validations:
+      required: false
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
+    validations:
       required: true
   - type: dropdown
-    id: platform
+    id: version
     attributes:
-      label: "Platform / OS"
+      label: Version
+      description: What version of our software are you running?
       options:
-        - "Windows 10"
-        - "Windows 11"
-        - "Linux"
-        - "Other"
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
+    validations:
       required: true
-  - type: textarea
-    id: description
+  - type: dropdown
+    id: browsers
     attributes:
-      label: "Short description"
-      description: "What happened?"
-      required: true
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
   - type: textarea
-    id: steps
-    attributes:
-      label: "Steps to reproduce"
-      description: "1. ... 2. ... 3. ..."
-      required: true
-  - type: textarea
-    id: expected
-    attributes:
-      label: "Expected behavior"
-      description: "What did you expect to happen?"
-      required: true
-  - type: textarea
-    id: actual
-    attributes:
-      label: "Actual behavior"
-      description: "What actually happened?"
-      required: true
-  - type: input
     id: logs
     attributes:
-      label: "Logs or crash files"
-      description: "Attach or link to log files or crash dumps if available."
-      required: false
-  - type: textarea
-    id: repro_video
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
     attributes:
-      label: "Screenshots / Video"
-      description: "Attach files or link to Imgur, YouTube, etc."
-      required: false
-  - type: boolean
-    id: crash_dump
-    attributes:
-      label: "Includes crash dump / stack trace?"
-      description: "Check if a crash dump or stack trace is attached."
-  - type: textarea
-    id: extra
-    attributes:
-      label: "Additional details"
-      description: "Graphics settings, controllers, mods, or anything else relevant."
-      required: false
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
